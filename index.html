@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher's Day Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card-container">
+        <!-- Title Banner -->
+        <h1 class="htd">Happy Teacher's Day! 🌸</h1>
+
+        <!-- Content Area -->
+        <div class="row">
+            <div class="img-box">
+                <img src="sir.jpeg" alt="Teacher Photo">
+            </div>
+            <div class="words">
+                <h2>Thank you for your hard work and dedication! This appreciation isn't just for you, but for all the amazing teachers in our school who guide and inspire us every day. We are so lucky to have you!</h2>
+            </div>
+        </div>
+
+        <!-- Hidden Audio Element -->
+        <audio id="myAudio" src="hungry cat.mp3" loop></audio>
+
+        <!-- Cute & Simple Audio Widget -->
+        <div class="music-widget">
+            <div class="music-info">
+                <span class="music-icon">🎵</span>
+                <span class="track-title">Hungry Cat</span>
+            </div>
+            <button id="playBtn" onclick="togglePlay()" aria-label="Play Music">&#9654;</button>
+        </div>
+    </div>
+
+    <script>
+        function togglePlay() {
+            var audio = document.getElementById("myAudio");
+            var btn = document.getElementById("playBtn");
+
+            if (audio.paused) {
+                audio.play();
+                btn.innerHTML = "&#10074;&#10074;"; // Pause icon
+            } else {
+                audio.pause();
+                btn.innerHTML = "&#9654;"; // Play icon
+            }
+        }
+    </script>
+</body>
+</html>
